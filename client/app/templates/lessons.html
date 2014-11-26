@@ -1,0 +1,17 @@
+<ion-view title="Lessons">
+  <ion-content>
+    <ion-list>
+
+      <ion-item
+        type="item-text-wrap"
+        class="item-icon-right"
+        ng-repeat="lesson in lessons"
+        href="#/tab/lesson/{{lesson.id}}">
+        <h3>{{lesson.title}}</h3>
+        <p>{{lesson.description}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>
