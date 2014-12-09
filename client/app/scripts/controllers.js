@@ -10,6 +10,13 @@ angular
     $scope.lesson = TestService.get($stateParams.lessonId);
   })
 
+  .controller('UsersCtrl', function($scope) {
+    $scope.users = [
+      {name: 'Stig Murberg', email: 'stig.murberg@gmail.com'},
+      {name: 'Hani Mustafa', email: 'hani.mustafa@gmail.com'}
+    ];
+  })
+
   .controller('CreateCtrl', function($scope, $state, TestService) {
     $scope.title = '';
     $scope.description = '';

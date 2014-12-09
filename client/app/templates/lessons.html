@@ -1,17 +1,20 @@
-<ion-view title="Lessons">
+<ion-view title="Today in Oslo">
   <ion-content>
     <ion-list>
-
       <ion-item
         type="item-text-wrap"
         class="item-icon-right"
         ng-repeat="lesson in lessons"
         href="#/tab/lesson/{{lesson.id}}">
-        <h3>{{lesson.title}}</h3>
+        <h3>19:00 {{lesson.title}}</h3>
         <p>{{lesson.description}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
-
     </ion-list>
+    <p class="pad"><a
+      href="#/tab/create"
+      class="button button-full button-small button-royal icon ion-plus">
+      Create
+    </a></p>
   </ion-content>
 </ion-view>

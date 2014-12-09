@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('Obsidian', ['ionic', 'config', 'Obsidian.services', 'Obsidian.controllers'])
+  .module('Obsidian', ['ionic', 'angular-md5', 'config', 'Obsidian.services', 'Obsidian.controllers'])
 
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -51,6 +51,16 @@ angular
           'create-tab': {
             templateUrl: 'templates/create.html',
             controller: 'CreateCtrl'
+          }
+        }
+      })
+
+      .state('tab.people', {
+        url: '/people',
+        views: {
+          'people-tab': {
+            templateUrl: 'templates/users.html',
+            controller: 'UsersCtrl'
           }
         }
       });

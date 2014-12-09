@@ -1,0 +1,15 @@
+<ion-view title="Available teachers">
+  <ion-content>
+    <ion-list>
+      <ion-item
+        type="item-text-wrap"
+        class="item-icon-right item-avatar"
+        ng-repeat="user in users">
+          <img src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?d=retro">
+          <i class="icon ion-chevron-right icon-accessory"></i>
+          <h2>{{user.name}}</h2>
+          <p>Herder of lolcats...</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

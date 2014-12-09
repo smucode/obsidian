@@ -155,7 +155,7 @@ module.exports = function (grunt) {
       }
     },
 
-    
+
 
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
@@ -325,6 +325,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/lib/angular/angular.js',
           '<%= yeoman.app %>/lib/angular-animate/angular-animate.js',
           '<%= yeoman.app %>/lib/angular-sanitize/angular-sanitize.js',
+          '<%= yeoman.app %>/lib/angular-md5/angular-md5.js',
           '<%= yeoman.app %>/lib/angular-ui-router/release/angular-ui-router.js',
           '<%= yeoman.app %>/lib/ionic/release/js/ionic.js',
           '<%= yeoman.app %>/lib/ionic/release/js/ionic-angular.js',
