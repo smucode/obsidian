@@ -3,11 +3,15 @@ angular
   .module('Obsidian.controllers', [])
 
   .controller('LessonsCtrl', function($scope, TestService) {
-    $scope.lessons = TestService.all();
+    TestService.all(function(lessons) {
+      $scope.lessons = lessons;
+    });
   })
 
   .controller('LessonCtrl', function($scope, $stateParams, TestService) {
-    $scope.lesson = TestService.get($stateParams.lessonId);
+    TestService.get($stateParams.lessonId, function(lesson) {
+      $scope.lesson = lesson;
+    });
   })
 
   .controller('UsersCtrl', function($scope) {
@@ -21,7 +25,8 @@ angular
     $scope.title = '';
     $scope.description = '';
     $scope.create = function(title, description) {
-      TestService.create(title, description);
-      $state.go('tab.lessons');
+      TestService.create(title, description, function() {
+        $state.go('tab.lessons');
+      });
     };
   });

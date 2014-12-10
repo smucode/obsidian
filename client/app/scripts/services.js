@@ -1,26 +1,29 @@
 'use strict';
 angular
   .module('Obsidian.services', [])
-  .factory('TestService', function() {
+  .factory('TestService', function($http) {
 
-    var lessons = [
-      {id: 0, title: 'Spanish lesson', description: 'Habla enspañol?'},
-      {id: 1, title: 'French lesson', description: 'Parlez vous françias?'}
-    ];
+    var apiPath = 'http://tutora-app.herokuapp.com/v1';
 
     return {
-      all: function() {
-        return lessons;
+      all: function(success) {
+        $http
+          .get(apiPath + '/lesson')
+          .success(success);
       },
-      get: function(id) {
-        return lessons[id];
+      get: function(id, success) {
+        $http
+          .get(apiPath + '/lesson/' + id)
+          .success(success);
       },
-      create: function(title, description) {
-        lessons.push({
-          id: lessons.length,
-          title: title,
-          description: description
-        });
+      create: function(title, description, success) {
+        $http
+          .post(apiPath + '/lesson', {
+            id: new Date().getTime().toString(16),
+            title: title,
+            desc: description
+          })
+          .success(success);
       }
     };
   });
