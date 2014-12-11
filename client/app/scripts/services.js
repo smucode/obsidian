@@ -8,17 +8,17 @@ angular
     return {
       all: function(success) {
         $http
-          .get(apiPath + '/lesson')
+          .get(apiPath + '/lessons')
           .success(success);
       },
       get: function(id, success) {
         $http
-          .get(apiPath + '/lesson/' + id)
+          .get(apiPath + '/lessons/' + id)
           .success(success);
       },
       create: function(title, description, success) {
         $http
-          .post(apiPath + '/lesson', {
+          .post(apiPath + '/lessons', {
             id: new Date().getTime().toString(16),
             title: title,
             desc: description
