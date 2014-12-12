@@ -1,4 +1,6 @@
 'use strict';
+/* global facebookConnectPlugin */
+
 angular
   .module('Obsidian.controllers', [])
 
@@ -19,6 +21,15 @@ angular
       {name: 'Stig Murberg', email: 'stig.murberg@gmail.com'},
       {name: 'Hani Mustafa', email: 'hani.mustafa@gmail.com'}
     ];
+  })
+
+  .controller('AuthCtrl', function($scope) {
+    var callback = function(data) {
+      $scope.auth = JSON.stringify(data);
+    };
+    $scope.doAuth = function() {
+      facebookConnectPlugin.login(['email'], callback, callback);
+    };
   })
 
   .controller('CreateCtrl', function($scope, $state, TestService) {

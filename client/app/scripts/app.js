@@ -55,6 +55,16 @@ angular
         }
       })
 
+      .state('tab.auth', {
+        url: '/auth',
+        views: {
+          'auth-tab': {
+            templateUrl: 'templates/auth.html',
+            controller: 'AuthCtrl'
+          }
+        }
+      })
+
       .state('tab.people', {
         url: '/people',
         views: {
