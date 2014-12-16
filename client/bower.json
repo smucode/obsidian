@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "dependencies": {
     "ionic": "v1.0.0-beta.13",
-    "angular-md5": "~0.1.7"
+    "angular-md5": "~0.1.7",
+    "typicons": "~2.0.6"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.17",

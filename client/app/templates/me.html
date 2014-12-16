@@ -1,0 +1,10 @@
+<ion-view title="">
+  <ion-content>
+    <div style="text-align: center">
+      <div ng-show="user" style="padding-top: 60px;">
+        <img src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?d=retro&s=140" style="border-radius: 70px">
+        <div style="font-size: 32px; padding-bottom: 60px; padding-top: 20px">Welcome {{user.first_name}}</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

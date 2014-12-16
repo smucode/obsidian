@@ -1,0 +1,23 @@
+<ion-view title="">
+  <ion-content>
+    <div style="text-align: center">
+
+      <div
+        ng-show="error"
+        style="background: red; opacity: 0.7; color: white; padding: 10px;">
+        {{error}}
+      </div>
+
+      <div style="font-size: 48px; padding-top: 120px;">
+        <span class="typcn typcn-lightbulb"></span>
+        <div style="padding-bottom: 60px; padding-top: 20px">tutora</div>
+      </div>
+
+      <button ng-click="login()" style="padding: 40px 0; font-size: 20px;">
+        <span class="typcn typcn-social-facebook"></span>
+        <span>Login</span>
+      </button>
+
+    </div>
+  </ion-content>
+</ion-view>

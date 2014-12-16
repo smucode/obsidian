@@ -12,6 +12,8 @@
     <!-- <link rel="stylesheet" href="vendor/some.contrib.css"> -->
     <!-- bower:css -->
     <link rel="stylesheet" href="lib/ionic/release/css/ionic.css" />
+    <link rel="stylesheet" href="lib/typicons/src/font/typicons.css" />
+    <link rel="stylesheet" href="lib/typicons/src/font/typicons.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -21,6 +23,7 @@
   </head>
 
   <body ng-app="Obsidian" animation="slide-left-right-ios7">
+    <div id="fb-root"></div>
 
     <!--
       The nav bar that will be updated as we navigate between views
@@ -55,6 +58,8 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+    <!--<script src="http://connect.facebook.net/en_US/sdk.js"></script>-->
+    <script src="lib/com.phonegap.plugins.facebookconnect/facebookConnectPlugin.js"></script>
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/config.js"></script>

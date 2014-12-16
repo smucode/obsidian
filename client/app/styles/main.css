@@ -1,6 +1,43 @@
-.ionic-logo {
-  display: block;
-  margin: 15px auto;
-  width: 96px;
-  height: 96px;
+@font-face {
+  font-family: 'typicons';
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, div, button, h1, h2, h3, h4, h5 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* tabs stuff */
+
+.tab-item .icon {
+  padding-top: 12px;
+}
+
+.tabs {
+  border-top: 0;
+  background: white;
+}
+
+/* headers stuff */
+
+.bar.bar-positive {
+  border: 0;
+  background: white;
+}
+
+.bar.bar-positive  h1.title {
+  margin: 0;
+  color: #333;
+  background: white;
+  border: 0;
+}
+
+/* buttons */
+
+button {
+  border: 0;
+  background: white;
+  padding: 5px 20px;
+  font-size: 16px;
 }
